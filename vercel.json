@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "motivasi-ai",
+  "name": "zenith-ai",
   "builds": [
     {
       "src": "api/**/*.js",
@@ -17,24 +17,24 @@
       "dest": "/api/$1.js"
     },
     {
-      "src": "/(.*)",
-      "dest": "/public/$1"
-    },
-    {
-      "src": "/",
-      "dest": "/public/index.html"
-    },
-    {
-      "src": "/home",
-      "dest": "/public/pro.html"
-    },
-    {
       "src": "/login",
-      "dest": "/public/login.html"
+      "dest": "/login.html"
     },
     {
       "src": "/register",
-      "dest": "/public/register.html"
+      "dest": "/register.html"
+    },
+    {
+      "src": "/home",
+      "dest": "/pro.html"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ]
 }
