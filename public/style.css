@@ -1,0 +1,172 @@
+/* ───────────── Global Styles ───────────── */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #2b0050 0%, #3f0070 50%, #5a00a0 100%);
+  min-height: 100vh;
+}
+
+/* Smooth transitions for inputs and buttons */
+input, textarea, select, button {
+  transition: all 0.2s ease-in-out;
+  font-family: inherit;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #9f7aea;
+  transition: all 0.2s ease-in-out;
+}
+a:hover {
+  color: #d6bcfa;
+}
+
+/* ───────────── Container ───────────── */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ───────────── Headers ───────────── */
+h1, h2, h3 {
+  font-weight: 700;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+
+/* ───────────── Form & Input ───────────── */
+input, textarea, select {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  width: 100%;
+}
+input::placeholder, textarea::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+/* Focus styles */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #d6bcfa;
+  box-shadow: 0 0 0 2px rgba(159, 122, 234, 0.3);
+}
+
+/* ───────────── Buttons ───────────── */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  background: #9f7aea;
+  color: #1a1a1a;
+}
+button:hover {
+  background: #d6bcfa;
+  color: #1a1a1a;
+  box-shadow: 0 5px 15px rgba(159, 122, 234, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Secondary buttons */
+button.bg-white\/10 {
+  background: rgba(255,255,255,0.1);
+  color: #d6bcfa;
+}
+button.bg-white\/10:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ───────────── Sections / Cards ───────────── */
+section {
+  margin-bottom: 2rem;
+}
+
+.bg-white\/5 {
+  background: rgba(255,255,255,0.05);
+}
+
+.bg-white\/6 {
+  background: rgba(255,255,255,0.06);
+}
+
+.bg-white\/10 {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Rounded & Shadow */
+.rounded-2xl {
+  border-radius: 1.5rem;
+}
+.shadow-lg {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* ───────────── Result Card ───────────── */
+#resultCard {
+  transition: all 0.3s ease-in-out;
+}
+
+/* ───────────── History List ───────────── */
+#historyList p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.875rem;
+}
+#historyList div {
+  background: rgba(255,255,255,0.05);
+  padding: 0.75rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: all 0.2s ease;
+}
+#historyList div:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* History buttons inside each item */
+#historyList button {
+  background: rgba(255,255,255,0.1);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+}
+#historyList button:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ───────────── Footer ───────────── */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ───────────── Responsive ───────────── */
+@media (max-width: 640px) {
+  main {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  button {
+    width: 100%;
+  }
+}
