@@ -18,19 +18,19 @@
     },
     {
       "src": "/login",
-      "dest": "/login.html"
+      "dest": "/public/login.html"
     },
     {
       "src": "/register",
-      "dest": "/register.html"
+      "dest": "/public/register.html"
     },
     {
       "src": "/home",
-      "dest": "/pro.html"
+      "dest": "/public/pro.html"
     },
     {
       "src": "/",
-      "dest": "/index.html"
+      "dest": "/public/index.html"
     },
     {
       "src": "/(.*)",
