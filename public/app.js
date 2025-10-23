@@ -1,5 +1,5 @@
 // public/app.js
-import { db, ref, push, set, onValue, get, child } from "./firebase.js";
+const { db, ref, push, set, onValue, get, child } = window;
 
 const promptEl = document.getElementById("prompt");
 const toneEl = document.getElementById("tone");
@@ -15,8 +15,8 @@ let currentUser = JSON.parse(localStorage.getItem("proUser")) || null;
 let lastResult = "";
 
 // Redirect ke login jika belum login
-if (!currentUser && window.location.pathname !== "/login.html") {
-  window.location.href = "/login.html";
+if (!currentUser && window.location.pathname !== "/login") {
+  window.location.href = "/login";
 }
 
 /* ────────────────────────────────
