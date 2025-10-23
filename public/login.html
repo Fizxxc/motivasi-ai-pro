@@ -4,15 +4,118 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zenith.AI Pro — Login</title>
-  <link rel="stylesheet" href="/style.css" />
+  <style>
+    /* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #3b0d6e, #1c0b3c, #0d0d0d);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+/* Container */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255,255,255,0.05);
+  padding: 32px 24px;
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+/* Title */
+.login-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* Input */
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.login-input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #7e3af2;
+  box-shadow: 0 0 12px rgba(126,58,242,0.6);
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  background: #7e3af2;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #9333ea;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Notes & Links */
+.login-note {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-top: 12px;
+}
+
+.login-link {
+  color: #7e3af2;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+  .login-container {
+    padding: 24px 16px;
+  }
+}
+  </style>
 </head>
-<body class="pro-body">
-  <main class="pro-container">
-    <h1>Login Zenith.AI Pro</h1>
-    <input id="loginEmail" type="email" placeholder="Email" class="input-field" />
-    <input id="loginPassword" type="password" placeholder="Password" class="input-field" />
-    <button id="loginBtn" class="btn">Login</button>
-    <p>Hubungi admin untuk mendapatkan akun Pro.</p>
+<body>
+  <main class="login-container">
+    <h1 class="login-title">Login Zenith.AI Pro</h1>
+    <div class="login-card">
+      <input id="loginEmail" type="email" placeholder="Email" class="login-input" />
+      <input id="loginPassword" type="password" placeholder="Password" class="login-input" />
+      <button id="loginBtn" class="login-btn">Login</button>
+      <p class="login-note">Hubungi admin untuk mendapatkan akun Pro.</p>
+    </div>
   </main>
 
   <script type="module" src="/app.js"></script>

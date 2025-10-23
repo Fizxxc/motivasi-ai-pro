@@ -3,58 +3,254 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zenith.AI Pro - Home</title>
-  <link rel="stylesheet" href="/style.css">
+  <title>Zenith.AI Pro — Home</title>
+  <style>
+    /* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #2c0254, #1b002b, #0d0d0d);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+/* Container */
+.pro-container {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  flex: 1;
+}
+
+/* Header */
+.pro-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.pro-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.pro-logout {
+  padding: 6px 12px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pro-logout:hover {
+  background: #a855f7;
+  border-color: #9333ea;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* Cards */
+.pro-card {
+  background: rgba(255,255,255,0.05);
+  padding: 24px 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+/* Labels & Inputs */
+.pro-label {
+  display: block;
+  margin-bottom: 8px;
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+.pro-textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+.pro-textarea::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+.pro-textarea:focus {
+  outline: none;
+  border-color: #a855f7;
+  box-shadow: 0 0 12px rgba(168,85,247,0.5);
+}
+
+/* Select & Buttons */
+.pro-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.pro-select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+}
+
+.pro-btn {
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: #a855f7;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pro-btn:hover {
+  background: #9333ea;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.pro-btn-outline {
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pro-btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.pro-btn-text {
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  color: #a855f7;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pro-btn-text:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Result */
+.pro-result-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.pro-result-text {
+  line-height: 1.5;
+}
+
+/* History */
+.pro-history-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.pro-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pro-history-empty {
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+.pro-footer {
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .pro-actions {
+    flex-direction: column;
+  }
+
+  .pro-btn, .pro-select {
+    width: 100%;
+  }
+}
+
+  </style>
 </head>
-<body class="bg-gradient-to-b from-purple-900 via-indigo-800 to-pink-700 text-white font-sans min-h-screen">
-  <main class="max-w-3xl mx-auto p-6">
-    <header class="flex items-center justify-between mb-6">
-      <h1 class="text-3xl font-extrabold">Zenith.AI Pro</h1>
-      <button id="logoutBtn" class="text-sm px-3 py-1 bg-white/10 rounded-lg">Logout</button>
+<body>
+  <main class="pro-container">
+    <header class="pro-header">
+      <h1>Zenith.AI Pro</h1>
+      <button id="logoutBtn" class="pro-logout">Logout</button>
     </header>
 
-    <section class="bg-white/5 p-6 rounded-2xl shadow-lg mb-6">
-      <label class="block mb-2 text-sm opacity-80">Ceritakan situasimu atau ketik kata kunci:</label>
-      <textarea id="prompt" rows="3" class="w-full p-3 rounded-lg bg-white/6 placeholder:text-white/60 border border-white/10 focus:outline-none" placeholder="Misal: saya kurang percaya diri saat presentasi..."></textarea>
+    <section class="pro-card">
+      <label for="prompt" class="pro-label">Ceritakan situasimu atau ketik kata kunci:</label>
+      <textarea id="prompt" rows="3" placeholder="Misal: saya kurang percaya diri saat presentasi..." class="pro-textarea"></textarea>
 
-      <div class="flex gap-3 mt-4">
-        <select id="tone" class="p-2 rounded-lg bg-white/6 border border-white/10">
+      <div class="pro-actions">
+        <select id="tone" class="pro-select">
           <option value="inspirational">Inspiratif</option>
           <option value="calm">Tenang</option>
           <option value="energetic">Semangat / Energetik</option>
           <option value="deep">Mendalam</option>
         </select>
 
-        <button id="generateBtn" class="ml-auto px-5 py-2 rounded-lg bg-white text-purple-800 font-semibold hover:shadow-xl transition">Dapatkan Motivasi Pro</button>
+        <button id="generateBtn" class="pro-btn">Dapatkan Motivasi Pro</button>
       </div>
     </section>
 
-    <section id="resultCard" class="hidden bg-white/6 p-6 rounded-2xl mb-6">
-      <div class="flex items-start gap-4">
-        <div class="flex-1">
-          <h2 class="text-lg font-bold mb-2">Motivasimu</h2>
-          <p id="resultText" class="leading-relaxed"></p>
-        </div>
-      </div>
+    <section id="resultCard" class="pro-card hidden">
+      <h2 class="pro-result-title">Motivasimu</h2>
+      <p id="resultText" class="pro-result-text"></p>
 
-      <div class="mt-4 flex gap-3">
-        <button id="saveBtn" class="px-4 py-2 rounded-lg bg-white/10 border border-white/20">Simpan</button>
-        <button id="copyBtn" class="px-4 py-2 rounded-lg bg-white text-purple-800 font-semibold">Salin</button>
+      <div class="pro-actions mt-3">
+        <button id="saveBtn" class="pro-btn-outline">Simpan</button>
+        <button id="copyBtn" class="pro-btn-text">Salin</button>
       </div>
     </section>
 
-    <section class="bg-white/5 p-6 rounded-2xl">
-      <h3 class="font-bold mb-3">Riwayat</h3>
-      <div id="historyList" class="space-y-3">
-        <p class="opacity-80 text-sm">Belum ada riwayat — buat motivasi pertama kamu!</p>
+    <section class="pro-card">
+      <h3 class="pro-history-title">Riwayat</h3>
+      <div id="historyList" class="pro-history-list">
+        <p class="pro-history-empty">Belum ada riwayat — buat motivasi pertama kamu!</p>
       </div>
     </section>
   </main>
 
-  <footer>
-        <p>2025 © Zenith.AI Pro</p>
+  <footer class="pro-footer">
+    <p>2025 © Zenith.AI Pro</p>
   </footer>
+
   <script src="/firebase.js"></script>
-  <script src="/app.js"></script>
+  <script type="module" src="/app.js"></script>
 </body>
 </html>

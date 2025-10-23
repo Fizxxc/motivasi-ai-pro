@@ -1,20 +1,131 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zenith.AI — Register</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body class="pro-body">
-  <main class="pro-container">
-    <h1>Zenith.Ai Register</h1>
-    <input id="regEmail" type="email" placeholder="Email" class="input-field"/>
-    <input id="regPassword" type="password" placeholder="Password" class="input-field"/>
-    <button id="registerBtn" class="btn btn-register">Register</button>
-    <p>Sudah punya akun? <a href="/login">Login di sini</a></p>
-  </main>
 
-  <script type="module" src="/app.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith.AI — Register</title>
+    <style>
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(180deg, #2c0254, #1b002b, #0d0d0d);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+        }
+
+        /* Container */
+        .register-container {
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+        }
+
+        /* Card */
+        .register-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 36px 28px;
+            border-radius: 20px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+        }
+
+        /* Title */
+        .register-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        /* Input */
+        .register-input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 0.95rem;
+        }
+
+        .register-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .register-input:focus {
+            outline: none;
+            border-color: #a855f7;
+            box-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+        }
+
+        /* Button */
+        .register-btn {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #fff;
+            background: #a855f7;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .register-btn:hover {
+            background: #9333ea;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Notes & Links */
+        .register-note {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 12px;
+        }
+
+        .register-link {
+            color: #a855f7;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .register-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 450px) {
+            .register-card {
+                padding: 24px 16px;
+            }
+        }
+    </style>
+
+<body>
+    <main class="register-container">
+        <h1 class="register-title">Daftar Zenith.AI Pro</h1>
+        <div class="register-card">
+            <input id="regEmail" type="email" placeholder="Email" class="register-input" />
+            <input id="regPassword" type="password" placeholder="Password" class="register-input" />
+            <button id="registerBtn" class="register-btn">Register</button>
+            <p class="register-note">Sudah punya akun? <a href="/login" class="register-link">Login di sini</a></p>
+            <p class="register-note">Hubungi admin untuk aktivasi manual jika diperlukan.</p>
+        </div>
+    </main>
+
+    <script type="module" src="/app.js"></script>
 </body>
+
 </html>
